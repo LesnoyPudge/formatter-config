@@ -1,0 +1,26 @@
+{
+    "name": "@lesnoypudge/formatter-config",
+    "version": "1.0.0",
+    "description": "lesnoypudge's formatter-config",
+    "main": "generateFormatterConfig.js",
+    "type": "module",
+    "bin": {
+        "formatter-config": "./generateFormatterConfig.js"
+    },
+    "scripts": {},
+    "keywords": [
+        "prettier",
+        "lesnoypudge",
+        "formatter",
+        "config"
+    ],
+    "author": "LesnoyPudge",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^20.12.12",
+        "prettier": "^3.2.5"
+    },
+    "dependencies": {
+        "@lesnoypudge/utils": "^6.0.2"
+    }
+}
