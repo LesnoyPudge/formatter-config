@@ -1,6 +1,6 @@
 {
     "name": "@lesnoypudge/formatter-config",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "lesnoypudge's formatter-config",
     "main": "generateFormatterConfig.js",
     "type": "module",
