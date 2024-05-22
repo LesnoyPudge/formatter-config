@@ -1,1 +1,3 @@
 formatter-config
+
+npx formatter
