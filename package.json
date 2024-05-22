@@ -1,13 +1,16 @@
 {
     "name": "@lesnoypudge/formatter-config",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "lesnoypudge's formatter-config",
     "main": "generateFormatterConfig.js",
     "type": "module",
     "bin": {
         "formatter-config": "generateFormatterConfig.js"
     },
-    "scripts": {},
+    "scripts": {
+        "deploy": "git add . && git commit -m 'update' && git push && git status",
+        "publish": "npm publish --access public"
+    },
     "keywords": [
         "prettier",
         "lesnoypudge",
