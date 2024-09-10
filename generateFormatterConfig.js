@@ -15,7 +15,7 @@ import path from "node:path";
         return;
     }
 
-    console.log(JSON.stringify(referenceTree.getDataWithoutBuffer(), null, 4))
+    // console.log(JSON.stringify(referenceTree.getDataWithoutBuffer(), null, 4))
 
     const traverse = (currentPath, tree, fileCb) => {
         tree.files.forEach((file) => {
