@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import fs from "node:fs/promises";
-import { getFolderTree } from "@lesnoypudge/utils";
+import { FolderTree } from "@lesnoypudge/utils";
 import path from "node:path";
 
 
@@ -9,7 +9,13 @@ import path from "node:path";
 (() => {
     const __dirname = import.meta.dirname;
     const referencePath = path.resolve(__dirname, './reference')
-    const referenceTree = getFolderTree(referencePath);
+    const referenceTree = new FolderTree(referencePath);
+    if (!referenceTree.data) {
+        console.error('Reference tree is null')
+        return;
+    }
+
+    console.log(JSON.stringify(referenceTree.getDataWithoutBuffer(), null, 4))
 
     const traverse = (currentPath, tree, fileCb) => {
         tree.files.forEach((file) => {
@@ -24,7 +30,7 @@ import path from "node:path";
 
     const executionPath = process.cwd();
 
-    traverse(executionPath, referenceTree, (currentPath, file) => {
+    traverse(executionPath, referenceTree.data, (currentPath, file) => {
         fs.mkdir(currentPath, { recursive: true })
         fs.writeFile(path.join(currentPath, file.name), file.data)
     })

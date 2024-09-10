@@ -1,6 +1,6 @@
 {
     "name": "@lesnoypudge/formatter-config",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "description": "lesnoypudge's formatter-config",
     "main": "generateFormatterConfig.js",
     "type": "module",
@@ -8,6 +8,7 @@
         "formatter-config": "generateFormatterConfig.js"
     },
     "scripts": {
+        "dev": "node generateFormatterConfig.js",
         "deploy": "git add . && git commit -m 'update' && git push && git status",
         "publish": "npm publish --access public"
     },
@@ -20,9 +21,9 @@
     "author": "LesnoyPudge",
     "license": "ISC",
     "devDependencies": {
-        "@types/node": "^20.14.4"
+        "@types/node": "^22.5.4"
     },
     "dependencies": {
-        "@lesnoypudge/utils": "^8.1.1"
+        "@lesnoypudge/utils": "^12.3.0"
     }
 }
