@@ -1,16 +1,17 @@
 {
     "name": "@lesnoypudge/formatter-config",
-    "version": "2.1.2",
+    "version": "3.0.0",
     "description": "lesnoypudge's formatter-config",
-    "main": "generateFormatterConfig.js",
+    "main": "./build/index.js",
     "type": "module",
     "bin": {
-        "formatter-config": "generateFormatterConfig.js"
+        "formatter-config": "./build/index.js"
     },
     "scripts": {
-        "dev": "node generateFormatterConfig.js",
+        "dev": "node --experimental-strip-types ./src/index.ts",
         "deploy": "git add . && git commit -m 'update' && git push && git status",
-        "publish": "npm publish --access public"
+        "publish": "npm publish --access public",
+        "build": "builder"
     },
     "keywords": [
         "prettier",
@@ -21,9 +22,8 @@
     "author": "LesnoyPudge",
     "license": "ISC",
     "devDependencies": {
-        "@types/node": "^22.5.4"
-    },
-    "dependencies": {
-        "@lesnoypudge/utils": "^12.3.0"
+        "@lesnoypudge/builder": "^1.0.4",
+        "@lesnoypudge/types-global-base": "^1.4.0",
+        "@types/node": "^22.5.5"
     }
 }
