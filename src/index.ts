@@ -13,7 +13,12 @@ type File = {
 const untransferableFiles: File[] = [
     {
         name: '.gitignore',
-        data: ['node_modules', 'dist', 'build'].join('\n'),
+        data: [
+            'node_modules', 
+            'dist', 
+            'build',
+            'package-lock.json',
+        ].join('\n'),
     }
 ];
 
@@ -28,10 +33,6 @@ const untransferableFiles: File[] = [
         recursive: true,
         force: false,
         errorOnExist: false,
-        // filter(source) {
-        //     const fileName = path.basename(source);
-        //     return !fileName.startsWith('untransferable_');
-        // },
     })
 
     untransferableFiles.forEach((file) => {
