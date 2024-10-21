@@ -18,6 +18,7 @@ const untransferableFiles: File[] = [
             'dist', 
             'build',
             'package-lock.json',
+            '.env',
         ].join('\n'),
     }
 ];
@@ -26,6 +27,7 @@ const untransferableFiles: File[] = [
     const __dirname = import.meta.dirname;
     const referencePath = path.resolve(__dirname, '../reference')
     const executionPath = process.cwd();
+    let fileCount = 0;
 
     fs.cpSync(referencePath, executionPath, {
         dereference: true,
@@ -34,13 +36,14 @@ const untransferableFiles: File[] = [
         force: false,
         errorOnExist: false,
     })
-
+    
     untransferableFiles.forEach((file) => {
         const filePath = path.join(executionPath, file.name);
         if (fs.existsSync(filePath)) return;
 
         fs.writeFileSync(filePath, file.data, {encoding: 'utf-8'})
+        fileCount++;
     })
 
-    console.log('files generated');
+    console.log(`generated: ${fileCount} file(s)`);
 })();

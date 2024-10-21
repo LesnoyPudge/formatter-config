@@ -1,6 +1,6 @@
 {
     "name": "@lesnoypudge/formatter-config",
-    "version": "3.3.0",
+    "version": "4.0.0",
     "description": "lesnoypudge's formatter-config",
     "main": "./build/index.js",
     "type": "module",
@@ -22,8 +22,8 @@
     "author": "LesnoyPudge",
     "license": "ISC",
     "devDependencies": {
-        "@lesnoypudge/builder": "^1.0.4",
-        "@lesnoypudge/types-global-base": "^1.4.0",
-        "@types/node": "^22.5.5"
+        "@lesnoypudge/builder": "^1.0.5",
+        "@lesnoypudge/types-global-base": "^3.0.1",
+        "@types/node": "^22.7.7"
     }
 }

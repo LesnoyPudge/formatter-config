@@ -1,9 +1,10 @@
 {
     "include": [
-        "./src/**/*.ts",
+        "./src/**/*",
         "node_modules/@types"
     ],
     "compilerOptions": {
+        "pretty": true,
         "explainFiles": false,
         "baseUrl": ".",
         "paths": {
@@ -20,6 +21,7 @@
         "target": "ES2022",
         "verbatimModuleSyntax": false,
         "allowJs": true,
+        "checkJs": true,
         "resolveJsonModule": true,
         "moduleDetection": "auto",
 
