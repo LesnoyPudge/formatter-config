@@ -28,6 +28,7 @@
         "strict": true,
         "noUncheckedIndexedAccess": true,
         "noFallthroughCasesInSwitch": true,
+        "noUncheckedSideEffectImports": true,
 
         "noEmit": false,
         "outDir": "build",
