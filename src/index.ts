@@ -27,7 +27,6 @@ const untransferableFiles: File[] = [
     const __dirname = import.meta.dirname;
     const referencePath = path.resolve(__dirname, '../reference')
     const executionPath = process.cwd();
-    let fileCount = 0;
 
     fs.cpSync(referencePath, executionPath, {
         dereference: true,
@@ -42,8 +41,7 @@ const untransferableFiles: File[] = [
         if (fs.existsSync(filePath)) return;
 
         fs.writeFileSync(filePath, file.data, {encoding: 'utf-8'})
-        fileCount++;
     })
 
-    console.log(`generated: ${fileCount} file(s)`);
+    console.log(`files generated`);
 })();
