@@ -1,6 +1,6 @@
 {
     "name": "@lesnoypudge/formatter-config",
-    "version": "6.0.1",
+    "version": "6.1.0",
     "description": "lesnoypudge's formatter-config",
     "main": "./build/index.js",
     "type": "module",
@@ -24,7 +24,7 @@
     "devDependencies": {
         "@lesnoypudge/builder": "^2.0.0",
         "@lesnoypudge/types-global-base": "^4.0.0",
-        "@types/node": "^22.9.0"
+        "@lesnoypudge/types-global-node": "^1.0.0"
     },
     "dependencies": {
         "prettier": "^3.3.3"
