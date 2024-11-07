@@ -4,9 +4,7 @@
         "src/**/*",
         "node_modules/@types"
     ],
-    "exclude": [
-        "node_modules/@types/node/constants.d.ts"
-    ],
+    "exclude": [],
     "compilerOptions": {
         "types": [
             "@lesnoypudge/types-global-base"
