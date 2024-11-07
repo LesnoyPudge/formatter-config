@@ -1,0 +1,15 @@
+{
+    "extends": "./tsconfig.base.json",
+    "include": [
+        "src/**/*",
+        "node_modules/@types"
+    ],
+    "exclude": [
+        "node_modules/@types/node/constants.d.ts"
+    ],
+    "compilerOptions": {
+        "types": [
+            "@lesnoypudge/types-global-base"
+        ]
+    }
+}
