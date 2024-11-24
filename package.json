@@ -1,6 +1,6 @@
 {
     "name": "@lesnoypudge/formatter-config",
-    "version": "6.1.0",
+    "version": "7.0.0",
     "description": "lesnoypudge's formatter-config",
     "main": "./build/index.js",
     "type": "module",
