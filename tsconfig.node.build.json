@@ -6,7 +6,4 @@
     "exclude": [
         "src/**/*.test.*"
     ],
-    "compilerOptions": {
-        "noEmit": false
-    }
 }
