@@ -18,7 +18,7 @@
         "moduleResolution": "Bundler",
         "baseUrl": ".",
         "paths": {
-            // "@root": ["src/index.ts"]
+            // "@/root": ["src/index.ts"]
         },
         "types": [],
         "resolveJsonModule": true,
@@ -50,6 +50,9 @@
         "strict": true,
         "noUncheckedIndexedAccess": true,
         "noFallthroughCasesInSwitch": true,
+        "strictBindCallApply": true,
+        "strictBuiltinIteratorReturn": true,
+        "strictNullChecks": true,
         /*
     
         */
@@ -64,6 +67,7 @@
         
         */
         /* Output Formatting */
-        "pretty": true
+        "pretty": true,
+        "noErrorTruncation": true,
     }
 }

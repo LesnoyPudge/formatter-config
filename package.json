@@ -1,6 +1,6 @@
 {
     "name": "@lesnoypudge/formatter-config",
-    "version": "8.0.0",
+    "version": "9.0.0",
     "description": "lesnoypudge's formatter-config",
     "main": "./build/index.js",
     "type": "module",
@@ -10,7 +10,7 @@
     "scripts": {
         "dev": "node --experimental-strip-types ./src/index.ts",
         "deploy": "git add . && git commit -m 'update' && git push && git status",
-        "publish": "npm publish --access public",
+        "publish:npm": "npm run build && npm publish --access public",
         "build": "builder --configName tsconfig.node.build.json"
     },
     "keywords": [

@@ -1,10 +1,12 @@
 {
     "extends": "./tsconfig.base.json",
     "include": [
-        "src/**/*",
+        "./src/**/*",
         "node_modules/@types"
     ],
-    "exclude": [],
+    "exclude": [
+        "node_modules/@types/node",
+    ],
     "compilerOptions": {
         "types": [
             "@lesnoypudge/types-global-base",
@@ -16,6 +18,9 @@
             "ES2023",
             "DOM",
             "DOM.Iterable"
-        ]
+        ],
+        "paths": {
+            // "@/root": ["src/index.ts"]
+        },
     }
 }
